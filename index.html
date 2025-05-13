@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Packaging - Rendang Tempe Koro Pedang</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Smart Packaging System</h1>
+    <div id="form-section">
+        <label>pH: <input type="number" step="0.01" id="ph"></label>
+        <label>Mikroba (CFU/g): <input type="number" id="mikroba"></label>
+        <label>Suhu (°C): <input type="number" id="suhu"></label>
+        <button onclick="cekKelayakan()">Cek Kelayakan</button>
+    </div>
+    <div id="hasil"></div>
+    <canvas id="chart" width="400" height="200"></canvas>
+
+    <div id="penjelasan">
+        <h2>Penjelasan Data Dummy Penelitian</h2>
+        <p>Penelitian ini menggunakan lima sampel produk "Rendang Tempe Koro Pedang" dengan kode RTK-001 hingga RTK-005. Setiap sampel dianalisis berdasarkan empat parameter utama: pH, mikroba, suhu penyimpanan, dan warna indikator. Kombinasi parameter ini menentukan kelayakan konsumsi dan harga jual produk secara otomatis melalui sistem smart packaging.</p>
+        <ul>
+            <li><strong>pH:</strong> Semakin rendah pH, semakin aman produk.</li>
+            <li><strong>Mikroba:</strong> Jumlah mikroorganisme meningkat saat produk rusak.</li>
+            <li><strong>Suhu Penyimpanan:</strong> Semakin tinggi suhu, semakin cepat kerusakan.</li>
+            <li><strong>Warna Indikator:</strong> Dari merah kecoklatan (layak) ke kuning cerah (tidak layak).</li>
+        </ul>
+        <p>Kategori kelayakan dibagi menjadi: Sangat Layak, Layak, Batas Layak, dan Tidak Layak. Sistem ini juga mendukung dynamic pricing sesuai kondisi produk.</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
